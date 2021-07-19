@@ -1,0 +1,92 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+// RESETS
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+// VARIABLES
+    $brand-blue: #0073CE;
+    $brand-light-blue: #00A5F0;
+    $brand-green-light: #00D7D7;
+    $brand-yellow: #FFC800;
+    $brand-gradient: linear-gradient(99.31deg, #00A5F0 7.94%, #00D7D7 95.32%);
+
+    $gray-600: #33303E;
+    $gray-500: #4E4B59;
+    $gray-400: #5F5C6B;
+    $gray-300: #7A7786;
+    $gray-200: #C6C5CE;
+    $gray-100: #F1F0F5;
+
+    $ff-highlight: 'Poppins', sans-serif;
+
+// GRID
+.container{
+    width: 100%;
+    max-width: 124.6rem;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// TYPOGRAPHY
+h1, h2, h3, h4{
+    font-family: $ff-highlight;
+    color: $gray-500;
+}
+
+h1,
+h2{
+    letter-spacing: -1px;
+    line-height: 112%;
+}
+
+h3,
+h4{
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+h1{ 
+    font-size: 6.4rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 2.4rem;
+    line-height: 150%;
+}
+
+h4{
+    font-size: 2rem;
+    line-height: 112%;
+}
+

@@ -1,0 +1,20 @@
+@mixin flex($direction, $align, $justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+};
+
+@mixin responsive ($width){
+    @media (max-width: $width){
+        @content;
+    }
+};
+
+@mixin typography($ff, $size, $weight, $height, $color){
+    font-family: $ff;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    color: $color;
+};
