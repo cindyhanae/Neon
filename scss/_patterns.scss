@@ -29,6 +29,9 @@ button{
 }
 
 // VARIABLES
+    $white: #fff;
+    $black: #000;
+
     $brand-blue: #0073CE;
     $brand-light-blue: #00A5F0;
     $brand-green-light: #00D7D7;
@@ -43,6 +46,7 @@ button{
     $gray-100: #F1F0F5;
 
     $ff-highlight: 'Poppins', sans-serif;
+    $ff-default: 'Inter', sans-serif;
 
 // GRID
 .container{
@@ -60,8 +64,8 @@ h1, h2, h3, h4{
 
 h1,
 h2{
-    letter-spacing: -1px;
     line-height: 112%;
+    letter-spacing: -1px;
 }
 
 h3,
@@ -88,5 +92,24 @@ h3{
 h4{
     font-size: 2rem;
     line-height: 112%;
+}
+
+.p1,
+.p2,
+.p3{
+    font-weight: 400;
+    line-height: 150%;
+    color: $gray-500;
+}
+.p1{
+    font-size: 1.8rem;
+}
+
+.p2{
+    font-size: 1.6rem;
+}
+
+.p3{
+    font-size: 1.4rem;
 }
 

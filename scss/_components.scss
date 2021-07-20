@@ -1,0 +1,20 @@
+//CARD
+.card-testimonial{
+    width: 100%;
+    max-width: 38.4rem;
+    height: 20.9rem;
+    background-color: rgba(241, 240, 245, 0.55);
+    border-radius: 8px;
+    padding: 3.7rem 3.2rem 2.3rem 3.2rem;
+    p{
+        @include typography($ff-default, 1.8rem, 400, 150%, $gray-400);
+    }
+    .user{
+        @include flex(row, center, space-between);
+        margin-bottom: 2.1rem;
+        p{
+            @include typography($ff-highlight, 1.8rem, 600, 112%, $gray-500);
+            letter-spacing: -1px;
+        }
+    }
+}

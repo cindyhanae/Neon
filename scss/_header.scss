@@ -1,1 +1,31 @@
 // HEADER
+header{
+    background-color: transparent;
+    height: 8.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    .container{
+        @include flex(row, center, space-between);
+        nav{
+            @include flex(row, center, space-between);
+            gap: 5.9rem;
+            ul{
+                @include flex(row, center, space-between);
+                gap: 4.8rem;
+                li{
+                    a{
+                        @include typography($ff-highlight, 1.6rem, 500, 125%, $white);
+                        transition: color .3s ease;
+                        &:hover{
+                            color: $brand-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

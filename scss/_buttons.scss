@@ -1,0 +1,55 @@
+// BUTTON DEFAULT
+.btn{
+    display: inline-block;
+    // padding: 1.6rem 2.6rem;
+    line-height: 4.8rem;
+    padding-inline: 2.6rem;
+    border-radius: 12.2rem;
+    transition: all .3s ease;
+    a{
+        font-family: $ff-highlight;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: all .3s ease;
+    }
+}
+
+// PRIMARY
+.btn.btn-primary{
+    background-color: $brand-yellow;
+    a{
+        color: #855B35;
+    }
+    &:hover{
+        background-color: #FFDC5C;
+    }
+}
+
+// SECONDARY
+.btn.btn-secondary{
+    background-color: transparent;
+    border: 1px solid $brand-light-blue;
+    a{
+        color: $brand-light-blue;
+    }
+    &:hover{
+        background-color: $brand-light-blue;
+        a{
+            color: $white;
+        }
+    }
+}
+
+// WHITE
+.btn.btn-secondary.white{
+    border: 1px solid $white;
+    a{
+        color: $white;
+    }
+    &:hover{
+        background-color: $white;
+        a{
+            color: $brand-green-light;
+        }
+    }
+}
