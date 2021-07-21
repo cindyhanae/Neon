@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon - Landing Page</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <title>Neon - Landing Page</title>
 </head>
 <body>
     <header>
@@ -75,6 +79,7 @@
             </div>
         </section>
 
+        <!-- APP -->
         <section id="s-app">
             <div class="container">
                 <!-- APP LEFT -->
@@ -85,14 +90,15 @@
                     </div>
 
                     <div class="app-left-bottom">
-                        <img src="img/dots-color.svg" alt="Pontos coloridos" class="colored-dots">
-                        <img src="img/icon-neon.svg" alt="Ícone Neon">
+                        <div class="app-icon-neon">
+                            <img src="img/icon-neon.svg" alt="Ícone Neon">
+                        </div>
                         <div class="app-left-txt">
                             <h3>Baixe nosso app</h3>
                             <p class="p2">Que tal abrir uma conta digital para ver como a gente faz a sua vida muito mais simples?</p>
                         </div>
-                        <img src="img/apple.svg" alt="Download Apple Store">
-                        <img src="img/android.svg" alt="Download Google Play">
+                        <a href="#" target="_blank" class="apple-store"><img src="img/apple.svg" alt="Download Apple Store"></a>
+                        <a href="#" target="_blank"><img src="img/android.svg" alt="Download Google Play"></a>
                     </div>
 
                 </div>
@@ -102,34 +108,40 @@
                     <div class="app-right-top">
                         <h2>Resolva sua vida direto pelo app Neon!</h2>
 
-                        <div class="app-info">
-                            <button>
-                                <img src="img/icon-anuidade.svg" alt="Ícone anuidade" class="app-icon">
-                                <div class="app-txt">
-                                    <h3>Cartão de crédito sem anuidade</h3>
-                                    <p class="p1">Conta digital com cartão sem anuidade e sem complicação</p>
+                        <ul>
+                            <li>
+                                <div class="app-right-info">
+                                    <img src="img/icon-anuidade.svg" alt="Ícone anuidade" class="app-icon">
+                                    <div class="app-right-txt">
+                                        <h3>Cartão de crédito sem anuidade</h3>
+                                        <p class="p1">Conta digital com cartão sem anuidade e sem complicação</p>
+                                    </div>
                                 </div>
                                 <img src="img/arrow.svg" alt="Seta">
-                            </button>
+                            </li>
 
-                            <button>
-                                <img src="img/icon-tax.svg" alt="Ícone taxas">
-                                <div class="app-txt">
-                                    <h3>Sem taxas</h3>
-                                    <p class="p1">Transferências, boletos de depósitos e outros serviços gratuitos</p>
+                            <li>
+                                <div class="app-right-info">
+                                    <img src="img/icon-tax.svg" alt="Ícone taxas" class="app-icon">
+                                    <div class="app-right-txt">
+                                        <h3>Sem taxas</h3>
+                                        <p class="p1">Transferências, boletos de depósitos e outros serviços gratuitos</p>
+                                    </div>
                                 </div>
                                 <img src="img/arrow.svg" alt="Seta">
-                            </button>
+                            </li>
 
-                            <button>
-                                <img src="img/icon-cifra.svg" alt="Ícone cifrão">
-                                <div class="app-txt">
-                                    <h3>Mais investimentos</h3>
-                                    <p class="p1">Rendem mais que a poupança e você resgata quando quiser</p>
+                            <li>
+                                <div class="app-right-info">
+                                    <img src="img/icon-cifra.svg" alt="Ícone cifrão" class="app-icon">
+                                    <div class="app-right-txt">
+                                        <h3>Mais investimentos</h3>
+                                        <p class="p1">Rendem mais que a poupança e você resgata quando quiser</p>
+                                    </div>
                                 </div>
                                 <img src="img/arrow.svg" alt="Seta">
-                            </button>
-                        </div>
+                            </li>
+                        </ul>
 
                         <a href="#">Conheça outros produtos</a>
                     </div>
@@ -149,16 +161,251 @@
                             </div>
                         </div>
 
-                        <div class="app-right-img">
-                            <img src="img/card.png" alt="Neon">
-                        </div>
+                        <img src="img/card.png" alt="Neon" class="app-right-img">
                     </div>
                 </div>
             </div>
         </section>
 
-        
+        <!-- TESTIMONIALS -->
+        <section id="s-testimonials">
+            <div class="container">
+                <div class="test-top">
+                    <h2><span>Prático, fácil, moderno</span> Você resolve tudo sem estresse &#x1F60A;</h2>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- SLIDER -->
+                <div class="slide-test">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>@marciogurka</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Valeu @banconeon! Linda embalagem e o cartão tbm é lindo! Muito amor por esse banco #bancoNeon</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>kleriene18</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Eu uso o Neon pra render o poquinho que eu tenho. Como disse minha amiga Bruna, um dia eu abro o app de novo e PA: tô rica.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>mzlteet</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Só por ter um cartão virtual com bloqueio fácil no app, já ganha e muito na segurança pro cliente.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>@marciogurka</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Valeu @banconeon! Linda embalagem e o cartão tbm é lindo! Muito amor por esse banco #bancoNeon</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>kleriene18</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Eu uso o Neon pra render o poquinho que eu tenho. Como disse minha amiga Bruna, um dia eu abro o app de novo e PA: tô rica.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-testimonial">
+                                <div class="user">
+                                    <p>mzlteet</p>
+                                    <img src="img/icon-twitter.svg" alt="Ícone Twitter">
+                                </div>
+                                <p>Só por ter um cartão virtual com bloqueio fácil no app, já ganha e muito na segurança pro cliente.</p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+        <!-- DIGITAL -->
+        <section id="s-digital">
+            <div class="container">
+                <div class="digital-left">
+                    <h2><span>Aproveite</span>Domine o seu dinhero com uma conta 100% digital</h2>
+                    <ul>
+                        <li>
+                            <div class="digital-icon">
+                                <img src="img/icon-card.svg" alt="Ícone cartão">
+                            </div>
+                            <div class="digital-info">
+                                <h4>Cartão visa internacional</h4>
+                                <p class="p1">Tenha facilidades e benefícios para o seu dia a dia.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="digital-icon">
+                                <img src="img/icon-block.svg" alt="Ícone cartão">
+                            </div>
+                            <div class="digital-info">
+                                <h4>Zero mensalidade e anuidade</h4>
+                                <p class="p1">Não gaste grana pagando taxas desnecessárias.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="digital-icon">
+                                <img src="img/icon-money.svg" alt="Ícone cartão">
+                            </div>
+                            <div class="digital-info">
+                                <h4>Investimento que rende mais que a poupança</h4>
+                                <p class="p1">Invista o seu dinheiro de maneira mais rentável.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="btn btn-primary">
+                        <a href="#">Abra sua conta digital</a>
+                    </button>
+                </div>
+
+                <div class="digital-right">
+                    <a href="#"><img src="img/mockup-cash2.png" alt="Celular frente" class="cel1"></a>
+                    <a href="#"><img src="img/mockup-cash-1.png" alt="Celular frente" class="cel2"></a>
+                    <a href="#"><img src="img/circle-cash.svg" alt="Logo Neon" class="circle3"></a>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <img src="img/logo-neon-white.svg" alt="Logo Neon">
+                <div class="social">
+                    <p class="p3">Acompanhe nas redes</p>
+                    <ul>
+                        <li>
+                            <a href=""><img src="img/yt.svg" alt="Youtube"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/linkedin.svg" alt="Linkedin"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/fb.svg" alt="Facebook"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/ig.svg" alt="Instagram"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/twitter.svg" alt="Twitter"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-main">
+                <nav>
+                    <div class="col-footer">
+                        <p>Produtos Neon</p>
+                        <ul>
+                            <li><a href="#">Cartão de crédito</a></li>
+                            <li><a href="#">Cartão pré-pago</a></li>
+                            <li><a href="#">Neon Mais</a></li>
+                            <li><a href="#">Investimentos</a></li>
+                            <li><a href="#">Empréstimo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-footer">
+                        <p>Conta digital PJ</p>
+                        <ul>
+                            <li><a href="#">Sou MEI</a></li>
+                            <li><a href="#">Sou PJ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-footer">
+                        <p>Blog</p>
+                        <ul>
+                            <li><a href="#">#focanodinheiro</a></li>
+                            <li><a href="#">O poder da comunidade</a></li>
+                            <li><a href="#">Desafio das 52 semanas</a></li>
+                            <li><a href="#">Planilha de gastos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-footer">
+                        <p>Institucional</p>
+                        <ul>
+                            <li><a href="#">Conheça a Neon</a></li>
+                            <li><a href="#">Trabalhe conosco</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="#">Políticas de privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-footer">
+                        <p>Ajuda</p>
+                        <ul>
+                            <li><a href="#">Ouvidoria</a></li>
+                            <li><a href="#">Fale conosco</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="contato">
+                    <button class="box">
+                        <img src="img/icon-envelope.svg" alt="Ícone envelope">
+                        <div class="contato-info">
+                            <p>
+                                <strong>Atendimento:</strong>oi@neon.com.br (24 horas)
+                            </p>
+                        </div>
+                    </button>
+                    <button class="box">
+                        <img src="img/icon-talk.svg" alt="Ícone chat">
+                        <div class="contato-info">
+                            <p>
+                                <strong>Imprensa</strong>imprensa@neon.com.br
+                            </p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&#128512;</span>
+                <p>Oi! Leu até aqui? Você se preocupa com os mínimos detalhes, mesmo. A gente também. Por isso o time Neon está sempre trabalhando para fazer a conta digitla perfeita para você ; )</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".slide-test", {
+          slidesPerView: 3,
+          spaceBetween: 32,
+          pagination: {
+            // caminho ate o paginador
+            el: "#s-testimonials .test-top .swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+
+
 </body>
 </html>

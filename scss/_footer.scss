@@ -1,0 +1,95 @@
+footer{
+    background-color: $brand-blue;
+    padding-top: 4.9rem;
+    .footer-top{
+        @include flex(row, center, space-between);
+        padding-bottom: 4.8rem;
+        border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+        .social{
+            @include flex(row, center, space-between);
+            gap: 3rem;
+            .p3{
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 125%;
+            }
+            ul{
+                @include flex(row, center, space-between);
+                gap: 3rem;
+            }
+        }
+    }
+    .footer-main{
+        @include flex(row, flex-start, space-between);
+        padding: 5.7rem 0 6.2rem;
+        border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+        nav{
+            @include flex(row, flex-start, space-between);
+            width: 100%;
+            max-width: 86rem;
+            .col-footer{
+                p{
+                    @include typography($ff-highlight, 1.6rem, 600, 125%, $white);
+                    margin-bottom: 2.5rem;
+                }
+                ul{
+                    li{
+                        &:not(:last-child){
+                            margin-bottom: 2.9rem;
+                        }
+                        a{
+                            font-size: 1.4rem;
+                            line-height: 1.7rem;
+                            color: rgba(255, 255, 255, 0.7);
+                            transition: color .3s ease;
+                            &:hover{
+                                color: $brand-yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contato{
+            width: 100%;
+            max-width: 28rem;
+            .box{
+                width: 100%;
+                height: 7.6rem;
+                background-color: rgba(0, 164, 240, 0.23);
+                border-radius: 6px;
+                padding: 1.7rem 2rem;
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+                &:not(:last-child){
+                    margin-bottom: 2.4rem;
+                }
+                .contato-info{
+                    text-align: left;
+                    p{
+                        font-size: 1.4rem;
+                        line-height: 150%;
+                        color: $white;
+                        strong{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        border-bottom: 4px solid $brand-yellow;
+        padding-bottom: 3.8rem;
+        display: flex;
+        gap: 2.5rem;
+        padding-top: 3.9rem;
+        p{
+            width: 100%;
+            max-width: 70.3rem;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
