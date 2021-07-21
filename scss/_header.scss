@@ -26,6 +26,39 @@ header{
                     }
                 }
             }
+            .burger{
+                display: none;
+            }
+        }
+        @include responsive(1115px){
+            nav{
+                gap: 2rem;
+                ul{
+                    gap: 2rem;
+                }
+            }
+        }
+        @include responsive(955px){
+            .logo{
+                max-width: 10.8rem;
+            }
+            nav{
+                ul{
+                    display: none;
+                }
+                .burger{
+                    display: inline-block;
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
+    @include responsive(480px){
+        height: 7.3rem;
+        nav{
+            .btn-secondary{
+                display: none;
+            }
         }
     }
 }
