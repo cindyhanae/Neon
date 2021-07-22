@@ -100,6 +100,15 @@ h1{
 h2{
     font-size: 4rem;
     font-weight: 700;
+    @include responsive(995px){
+        font-size: 3.6rem;
+    }
+    @include responsive(768px){
+        font-size: 3.2rem;
+    }
+    @include responsive(400px){
+        font-size: 2.8rem;
+    }
 }
 
 h3{

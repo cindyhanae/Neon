@@ -206,7 +206,7 @@
         }
     }
     @include responsive(400px){
-        // height: auto;
+        height: 80rem;
         .container{
             padding-top: 5rem;
             .area-left{
@@ -266,6 +266,7 @@
     .app-left{
         width: 100%;
         max-width: 27.7rem;
+        border: 1px solid red;
         .app-left-top{
             width: 100%;
             max-width: 27.7rem;
@@ -324,12 +325,14 @@
             }
             ul{
                 li{
-                    padding: 3.3rem 0;
-                    border-bottom: 1px solid rgba(225, 224, 231, 0.9);
                     @include flex(row, center, space-between);
+                    border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+                    padding: 3.3rem 0;
                     .app-right-info{
                         @include flex(row, center, space-between);
-                        gap: 4.3rem;
+                        .app-icon{
+                            margin-right: 4.3rem;
+                        }
                         .app-right-txt{
                             h3{
                                 color: $gray-400;
@@ -398,22 +401,169 @@
     @include responsive(1360px){
         .app-left{
             max-width: 35rem;
+            .app-left-top{
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         .app-right{
-            max-width: 87.3rem;
+            max-width: 80rem;
         }
     }
     @include responsive(1230px){
         .app-left{
             max-width: 45rem;
-            border: 1px solid red;
             .app-left-top{
-                .app-iphone{
-                }
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .app-left-bottom{
+                max-width: 27.8rem;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         .app-right{
-            max-width: 77.3rem;
+            max-width: 77rem;
+            .app-right-top{
+                .app-right-info{
+                    margin-right: 2.5rem;
+                }
+            }
+        }
+    }
+    @include responsive(995px){
+        .container{
+            flex-direction: column-reverse;
+            align-items: center;
+            .app-left{
+                @include flex(row, center, space-between);
+                max-width: 61rem;
+                margin-top: 9.3rem;
+                .app-left-top{
+                    height: 54.1rem;
+                    .app-circle{
+                        display: none;
+                    }
+                    .app-iphone{
+                        width: 100%;
+                        max-width: 25.5rem;
+                    }
+                }
+                .app-left-bottom{
+                    max-width: 27rem;
+                    .app-icon-neon{
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    .app-left-txt{
+                        margin-bottom: 4.4rem; 
+                    }
+                    .apple-store{
+                        margin-bottom: 1.7rem;
+                    }
+                }
+            }
+            .app-right{
+                .app-right-top{
+                    h2{
+                        text-align: center;
+                        max-width: 42.4rem;
+                        margin-inline: auto;
+                        margin-bottom: 2rem;
+                    }
+                    ul{
+                        li{
+                            padding: 2.9rem 0;
+                            .app-right-info{
+                                width: 100%;
+                                max-width: 64.1rem;
+                                .app-icon{
+                                    margin-right: 3rem;
+                                }
+                            }
+                        }
+                    }
+                    a{
+                        margin-top: 4rem;
+                        font-size: 1.8rem;
+                        border: 1px solid red;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(768px){
+        .app-right{
+            .app-right-bottom{
+                .app-right-txt{
+                    h3{
+                        line-height: 120%;
+                    }
+                    .buttons{
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    @include responsive(590px){
+        .container{
+            .app-left{
+                flex-direction: column-reverse;
+                .app-left-top{
+                    display: flex;
+                    justify-content: center;
+                    .app-iphone{
+                        max-width: 21.8rem; 
+                    }
+                }
+                .app-left-bottom{
+                    margin: 6.7rem 0 4rem 0;
+                    .app-left-txt{
+                        margin: 0 0 4.4rem;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(400px){
+        margin-top: 8.6rem;
+        .container{
+            .app-right{
+                .app-right-top{
+                    h2{
+                        margin-bottom: 1rem;
+                    }
+                    ul{
+                        li{
+                            padding: 2.8rem 0 0.5rem 0;
+                            justify-content: none;
+                            .app-right-info{
+                                .app-icon{
+                                    width: 6.1rem;
+                                    height: 6.1rem;
+                                    margin-right: 2.3rem;
+                                }
+                                .app-right-txt{
+                                    max-width: 20.8rem;
+                                    h3{
+                                        font-size: 2rem;
+                                        line-height: 112%;
+                                        margin-bottom: 7px;
+                                    }
+                                    .p1{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -450,6 +600,9 @@
     }
     .slide-test{
         overflow: hidden;
+    }
+    @include responsive(995px){
+        margin-top: 10.9rem;
     }
 }
 
