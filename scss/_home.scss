@@ -395,6 +395,27 @@
             }
         }
     }
+    @include responsive(1360px){
+        .app-left{
+            max-width: 35rem;
+        }
+        .app-right{
+            max-width: 87.3rem;
+        }
+    }
+    @include responsive(1230px){
+        .app-left{
+            max-width: 45rem;
+            border: 1px solid red;
+            .app-left-top{
+                .app-iphone{
+                }
+            }
+        }
+        .app-right{
+            max-width: 77.3rem;
+        }
+    }
 }
 
 // TESTIMONIALS
