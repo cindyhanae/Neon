@@ -92,4 +92,11 @@ footer{
             color: rgba(255, 255, 255, 0.8);
         }
     }
+    @include responsive(1130px){
+        .footer-main{
+            nav{
+                
+            }
+        }
+    }
 }

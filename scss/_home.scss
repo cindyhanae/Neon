@@ -138,17 +138,21 @@
             align-items: center;
             padding-top: 6.2rem;
             .area-left{
-                text-align: center;
+                @include flex(column, center, center);
                 padding-bottom: 5rem;
+                max-width: 100%;
                 h3{
                     font-size: 1.8rem;
                     width: 100%;
                     max-width: 30rem;
+                    text-align: center;
+                    
                 }
                 h1{
                     margin: 2.4rem 0;
                     width: 100%;
                     max-width: 68.5rem;
+                    text-align: center;
                 }
                 .benefits{
                     max-width: 58.8rem;
@@ -173,16 +177,16 @@
                         &.hero-circle{
                             top: 0rem;
                             right: 13.3rem;
-                            width: 42.9rem;
+                            max-width: 42.9rem;
                         }
                         &.hero-card-front{
-                            width: 34rem;
                             top: 4rem;
                             left: 6.6rem;
+                            max-width: 34rem;
                         }
                         &.hero-card-back{
                             right: 14rem;
-                            width: 27.4rem;
+                            max-width: 27.4rem;
                         }
                     }
                 }
@@ -206,13 +210,12 @@
         }
     }
     @include responsive(400px){
-        height: 80rem;
+        height: 73.9rem;
         .container{
             padding-top: 5rem;
             .area-left{
                 h3{
                     font-size: 1.6rem;
-                    margin-inline: auto;
                 }
                 h1{
                     margin: 1.5rem 0 3.7rem 0;
@@ -221,34 +224,38 @@
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 1.6rem;
+                    max-width: 27rem;
                     .benefit{
                         gap: 1.8rem;
+                        .icon{
+                            width: 2rem;
+                            height: auto;
+                        }
                     }
                 }
             }
             .area-right{
                 max-width: 31.7rem;
-                margin-inline: auto;
+                margin: 0 auto;
                 h1{
                     display: none;
                 }
                 .images-hero{
+                    max-width: 30.5rem;
+                    height: 24.8rem;
                     img{
                         &.hero-circle{
                             width: 26.7rem;
                             right: 2.3rem;
-                            // z-index: 1000;
                         }
                         &.hero-card-front{
                             width: 21rem;
                             top: 3rem;
-                            z-index: 2;
                         }
                         &.hero-card-back{
                             width: 17rem;
                             right: 0rem;
                             top: 10.2rem;
-                            z-index: 1;
                         }
                     }
                 }
@@ -258,7 +265,7 @@
 }
 
 // APP LEFT
-#s-app{
+#s-app{              
     margin-top: 12.9rem;
     .container{
         @include flex(row, flex-start, space-between);
@@ -266,7 +273,6 @@
     .app-left{
         width: 100%;
         max-width: 27.7rem;
-        border: 1px solid red;
         .app-left-top{
             width: 100%;
             max-width: 27.7rem;
@@ -367,11 +373,11 @@
         }
 
         .app-right-bottom{
+            @include flex(row, center, space-between);
             width: 100%;
             height: 41rem;
             background: url("../img/bg.svg") no-repeat center center;
             border-radius: 12px;
-            @include flex(row, center, space-between);
             padding-left: 5.9rem;
             .app-right-img{
                 margin-right: -9rem;
@@ -398,24 +404,14 @@
             }
         }
     }
-    @include responsive(1360px){
-        .app-left{
-            max-width: 35rem;
-            .app-left-top{
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        .app-right{
-            max-width: 80rem;
-        }
-    }
     @include responsive(1230px){
         .app-left{
             max-width: 45rem;
             .app-left-top{
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto;
+                .app-circle{
+                    display: none;
+                }
             }
             .app-left-bottom{
                 max-width: 27.8rem;
@@ -424,29 +420,39 @@
             }
         }
         .app-right{
-            max-width: 77rem;
+            max-width: 73rem;
             .app-right-top{
-                .app-right-info{
-                    margin-right: 2.5rem;
+                ul{
+                    li{
+                        .app-right-info{
+                            margin: 0 2rem;
+                        }
+                    }
+                }
+            }
+            .app-right-bottom{
+                padding-left: 3rem;
+                .app-right-img{
+                    margin-right: -7rem;
                 }
             }
         }
     }
-    @include responsive(995px){
+    @include responsive(1050px){
         .container{
             flex-direction: column-reverse;
             align-items: center;
             .app-left{
                 @include flex(row, center, space-between);
                 max-width: 61rem;
-                margin-top: 9.3rem;
+                margin-top: 6.7rem;
                 .app-left-top{
                     height: 54.1rem;
+                    padding-bottom: 0;
                     .app-circle{
                         display: none;
                     }
                     .app-iphone{
-                        width: 100%;
                         max-width: 25.5rem;
                     }
                 }
@@ -466,51 +472,46 @@
                 }
             }
             .app-right{
+                max-width: 100%;
                 .app-right-top{
                     h2{
                         text-align: center;
-                        max-width: 42.4rem;
-                        margin-inline: auto;
+                        margin: 0 auto;
                         margin-bottom: 2rem;
                     }
                     ul{
                         li{
                             padding: 2.9rem 0;
-                            .app-right-info{
-                                width: 100%;
-                                max-width: 64.1rem;
-                                .app-icon{
-                                    margin-right: 3rem;
-                                }
-                            }
                         }
                     }
                     a{
                         margin-top: 4rem;
                         font-size: 1.8rem;
-                        border: 1px solid red;
+                        display: block;
+                        text-align: center;
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+                .app-right-bottom{
+                    max-width: 94.7%;
+                    .app-right-txt{
+                        h3{
+                            line-height: 120%;
+                        }
+                        .buttons{
+                            margin-top: 2rem;
+                        }
+                    }
+                    .app-right-img{
+                        margin-right: -8rem;
                     }
                 }
             }
         }
     }
-    @include responsive(768px){
-        .app-right{
-            .app-right-bottom{
-                .app-right-txt{
-                    h3{
-                        line-height: 120%;
-                    }
-                    .buttons{
-                        margin-top: 2rem;
-                    }
-                }
-            }
-        }
-    }
-    
-    
-    @include responsive(590px){
+    @include responsive(650px){
         .container{
             .app-left{
                 flex-direction: column-reverse;
@@ -528,21 +529,78 @@
                     }
                 }
             }
+            .app-right{
+                .app-right-bottom{
+                    max-width: 100%;
+                    height: 47rem;
+                    background-size: cover;
+                    flex-direction: column;
+                    padding-top: 4.3rem;
+                    padding-left: 0;
+                    .app-right-txt{
+                        text-align: center;
+                        max-width: 90%;
+                        h2{
+                            font-size: 2.8rem;
+                            font-weight: 600;
+                            letter-spacing: -1.72px;
+                            line-height: 42px;
+                        }
+                        h3{
+                            font-size: 2rem;
+                            line-height: 120%;
+                            font-weight: 600;
+                            margin-inline: auto;
+                        }
+                        .p2{
+                            margin-inline: auto;
+                            max-width: 25.3rem;
+                        }
+                    }
+                    .app-right-img{
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
     @include responsive(400px){
+        position: relative;
         margin-top: 8.6rem;
+        &:after{
+            content: '';
+            width: 100%;
+            height: 21.4rem;
+            background: linear-gradient(180deg, #F7F7FA 0%, rgba(247, 247, 250, 0) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
         .container{
+            .app-left{
+                .app-left-top{
+                    height: 39.7rem;
+                    overflow: hidden;
+                    .app-iphone{
+                        height: 46.3rem;
+                        width: 21.8rem;
+                    }
+                }
+            }
             .app-right{
                 .app-right-top{
+                    margin-bottom: 5rem;
                     h2{
                         margin-bottom: 1rem;
                     }
                     ul{
                         li{
-                            padding: 2.8rem 0 0.5rem 0;
+                            padding: 2.8rem 0;
                             justify-content: none;
                             .app-right-info{
+                                align-items: flex-start;
                                 .app-icon{
                                     width: 6.1rem;
                                     height: 6.1rem;
@@ -559,6 +617,15 @@
                                         font-size: 1.4rem;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+                .app-right-bottom{
+                    .app-right-txt{
+                        .buttons{
+                            .btn{
+                                padding: 0 3rem;
                             }
                         }
                     }
@@ -601,8 +668,40 @@
     .slide-test{
         overflow: hidden;
     }
-    @include responsive(995px){
-        margin-top: 10.9rem;
+    @include responsive(991px){
+        .test-top{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5rem;
+            h2{
+                font-weight: 600;
+                margin-bottom: 5.1rem;
+                text-align: center;
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    @include responsive(480px){
+        padding-top: 7.6rem;
+        .container{
+            padding: 0;
+        }
+        .test-top{
+            margin-bottom: 3.4rem;
+            h2{
+                margin-bottom: 3.4rem;
+                span{
+                    margin-bottom: 1.1rem;
+                    font-size: 2.8rem;
+                }
+            }
+        }
+        .slide-test{
+            // padding do lado esquerdo no primeiro card e do lado direito no último card
+            padding: 0 2rem;
+        }
     }
 }
 
@@ -673,5 +772,157 @@
             }
         }
     }
-
+    @include responsive(1220px){
+        .container{
+            flex-direction: column;
+            .digital-left{
+                max-width: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2{
+                    font-size: 3.6rem;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 5rem; 
+                    max-width: 80%;
+                    span{
+                        font-size: 3.6rem;
+                        font-weight: 600;
+                        margin-bottom: 1.1rem;
+                    }
+                }
+                ul{
+                    width: 100%;
+                    max-width: 63rem;
+                    margin-bottom: 4.9rem;
+                    li{
+                        &:not(:last-child){
+                            margin-bottom: 5.2rem;
+                        }
+                        .digital-info{
+                            .p1{
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+                }
+                button{
+                    display: block;
+                    margin-inline: auto;
+                }
+            }
+            .digital-right{
+                margin-top: 5rem;
+                max-width: 58.2rem;
+                margin-right: 0;
+                left: 0;
+                img{
+                    &.cel2{
+                        left: -50px;
+                        bottom: 0;
+                        z-index: 100;
+                    }
+                    &.cel1{
+                        right: -50px;
+                        top: 0px;
+                        z-index: 100;
+                    }
+                    &.circle3{
+                        bottom: 0;
+                        right: 0;
+                        width: 100%
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(900px){
+        padding: 8.6rem 0 8.1rem 0;
+        .digital-left{
+            max-width: 100%;
+        }
+        .digital-right{
+            max-width: 58.2rem;
+            height: 63.3rem;
+            img{
+                &.circle3{
+                    width: 100%;
+                }
+                &.cel2{
+                    z-index: 2;
+                }
+                &.cel1{
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    @include responsive(400px){
+        padding: 5.7rem 0 0rem 0;
+        .container{
+            .digital-left{
+                h2{
+                    font-size: 2.8rem;
+                    font-weight: 600;
+                    max-width: 100%;
+                    margin-bottom: 0rem;
+                    span{
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                    }
+                }
+                ul{
+                    margin-bottom: 0rem;
+                    li{
+                        flex-direction: column;
+                        gap: 0;
+                        &:not(:last-child){
+                            margin-bottom: 5.6rem;
+                        }
+                        .digital-icon{
+                            margin-bottom: 1.6rem;
+                        }
+                        .digital-info{
+                            text-align: center;
+                            h4{
+                                font-weight: 500;
+                                max-width: 28rem;
+                            }
+                            .p1{
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+                button{
+                    margin-top: 4.4rem;
+                }
+            }
+            .digital-right{
+                max-width: 35.7rem;
+                height: 46.9rem;
+                margin-top: 4.6rem;
+                img{
+                    &.cel2{
+                        width: 20rem;
+                        bottom: initial;
+                        top: 5.8rem;
+                        left: 0;
+                        z-index: 100;     
+                    }
+                    &.cel1{
+                        width: 20rem;
+                        right: 0;
+                        top: 0;
+                        z-index: 100;     
+                    }
+                    &.circle3{
+                        top: 10.5rem;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
