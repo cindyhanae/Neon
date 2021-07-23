@@ -11,6 +11,9 @@
     <!-- Slider -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <!-- Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Neon - Landing Page</title>
 </head>
 <body>
@@ -46,7 +49,7 @@
         <!-- HERO -->
         <section id="s-hero">
             <div class="container">
-                <div class="area-left">
+                <div class="area-left" data-aos="fade-right">
                     <h3>Abra sua conta, é só baixar o app!</h3>
                     <h1>A conta digital certa pra cuidar bem do seu dinheiro</h1>
                     <button class="btn btn-primary">
@@ -75,8 +78,8 @@
                     </div>
                 </div>
                 <div class="area-right">
-                    <h1>Banco 100% digital</h1>
-                    <div class="images-hero">
+                    <h1 data-aos="fade-left">Banco 100% digital</h1>
+                    <div class="images-hero" data-aos="zoom-1">
                         <img src="img/card-front.png" alt="Frente cartão" class="hero-card-front">
                         <img src="img/card-back.png" alt="Verso cartão" class="hero-card-back">
                         <img src="img/circle-hero.svg" alt="Círculo" class="hero-circle">
@@ -91,11 +94,11 @@
                 <!-- APP LEFT -->
                 <div class="app-left">
                     <div class="app-left-top">
-                        <img src="img/iphone-mockup.svg" alt="Iphone" class="app-iphone">
-                        <img src="img/circle-mockup.svg" alt="Circle" class="app-circle">
+                        <img src="img/iphone-mockup.svg" alt="Iphone" class="app-iphone" data-aos="flip-right">
+                        <img src="img/circle-mockup.svg" alt="Circle" class="app-circle" data-aos="fade-left">
                     </div>
 
-                    <div class="app-left-bottom">
+                    <div class="app-left-bottom" data-aos="fade-up">
                         <div class="app-icon-neon">
                             <img src="img/icon-neon.svg" alt="Ícone Neon">
                         </div>
@@ -111,7 +114,7 @@
 
                 <!-- APP RIGHT -->
                 <div class="app-right">
-                    <div class="app-right-top">
+                    <div class="app-right-top" data-aos="fade-left">
                         <h2>Resolva sua vida direto pelo app Neon!</h2>
 
                         <ul>
@@ -152,7 +155,7 @@
                         <a href="#">Conheça outros produtos</a>
                     </div>
 
-                    <div class="app-right-bottom">
+                    <div class="app-right-bottom" data-aos="fade-left">
                         <div class="app-right-txt">
                             <h2>Neon Pejota</h2>
                             <h3>Contas digitais PJ gratuitas para decolar seu negócio!</h3>
@@ -176,13 +179,13 @@
         <!-- TESTIMONIALS -->
         <section id="s-testimonials">
             <div class="container">
-                <div class="test-top">
+                <div class="test-top" data-aos="fade-right">
                     <h2><span>Prático, fácil, moderno</span> Você resolve tudo sem estresse &#x1F60A;</h2>
                     <div class="swiper-pagination"></div>
                 </div>
 
                 <!-- SLIDER -->
-                <div class="slide-test">
+                <div class="slide-test" data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card-testimonial">
@@ -251,7 +254,7 @@
         <!-- DIGITAL -->
         <section id="s-digital">
             <div class="container">
-                <div class="digital-left">
+                <div class="digital-left" data-aos="fade-right">
                     <h2><span>Aproveite</span>Domine o seu dinhero com uma conta 100% digital</h2>
                     <ul>
                         <li>
@@ -289,9 +292,9 @@
                 </div>
 
                 <div class="digital-right">
-                    <img src="img/mockup-cash2.png" alt="Celular frente" class="cel1">
-                    <img src="img/mockup-cash-1.png" alt="Celular frente" class="cel2">
-                    <img src="img/circle-cash.svg" alt="Logo Neon" class="circle3">
+                    <img src="img/mockup-cash2.png" alt="Celular frente" class="cel1" data-aos="fade-down">
+                    <img src="img/mockup-cash-1.png" alt="Celular frente" class="cel2" data-aos="fade-up">
+                    <img src="img/circle-cash.svg" alt="Logo Neon" class="circle3" data-aos="zoom-in">
                 </div>
             </div>
         </section>
@@ -302,6 +305,7 @@
         <div class="container">
             <div class="footer-top">
                 <img src="img/logo-neon-white.svg" alt="Logo Neon">
+
                 <div class="social">
                     <p class="p3">Acompanhe nas redes</p>
                     <ul>
@@ -323,6 +327,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="footer-main">
                 <nav>
                     <div class="col-footer">
@@ -398,9 +403,12 @@
         </div>
     </footer>
 
-    <!-- Slider JS -->
+    <!-- Slider JS, Animate JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+        // SLIDER
         var swiper = new Swiper(".slide-test", {
           slidesPerView: 3,
           spaceBetween: 32,
@@ -425,8 +433,12 @@
               }
           }
         });
+
+        // ANIMATE
+        AOS.init({
+            duration: 1000,
+            once: true, /* animação ocorre apenas 1 vez */
+        });
       </script>
-
-
 </body>
 </html>

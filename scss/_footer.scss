@@ -92,10 +92,94 @@ footer{
             color: rgba(255, 255, 255, 0.8);
         }
     }
-    @include responsive(1130px){
+    @include responsive(991px){
         .footer-main{
+            width: 100%;
+            position: relative; 
+            flex-direction: column;
+            align-items: flex-start;
             nav{
-                
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                margin: 0 auto;
+                .col-footer{
+                    width: 33%;
+                    margin-bottom: 5rem;
+                }
+            }
+            .contato{
+                position: absolute;
+                bottom: 14rem;
+                right: 0;
+            }
+        }
+        .footer-bottom{
+            flex-direction: column;
+            align-items: center;
+            p{
+                text-align: center;
+            }
+        }
+    }
+    @include responsive(650px){
+        padding-top: 4.6rem;
+        .footer-top{
+            flex-direction: column;
+            padding-bottom: 4.3rem;
+            .social{
+                flex-direction: column;
+                padding-top: 3.2rem;
+                gap: 2rem;
+                ul{
+                    gap: 3.7rem;
+                }
+            }
+        }
+        .footer-main{
+            padding: 5.2rem 0;
+            border-bottom: none;
+            nav{
+                justify-content: space-between;
+                .col-footer{
+                    width: 47%;
+                    &:not(:last-child){
+                        margin-bottom: 5.7rem;
+                    }
+                    p{
+                        font-size: 1.8rem;
+                        line-height: 2.7rem;
+                        margin-bottom: 1.8rem;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 1.6rem;
+                                line-height: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .contato{
+                position: initial;
+                max-width: 100%;
+                .box{
+                    img{
+                        display: none;
+                    }
+                    .contato-info{
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .footer-bottom{
+            padding-top: 0;
+            p{
+              width: 100%;
+              max-width: 25.7rem;  
             }
         }
     }
