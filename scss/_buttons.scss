@@ -53,3 +53,22 @@
         }
     }
 }
+
+.js-header{
+    .container{
+        nav{
+            button.btn.btn-secondary.white{
+                border: 1px solid $brand-light-blue;
+                a{
+                    color: $white;
+                }
+                &:hover{
+                    background-color: $white;
+                    a{
+                        color: $brand-light-blue;
+                    }
+                }
+            }
+        }
+    }
+}

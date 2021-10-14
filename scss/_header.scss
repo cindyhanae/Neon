@@ -2,14 +2,55 @@
 header{
     background-color: transparent;
     height: 8.8rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2000;
     width: 100%;
     display: flex;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+    &.fixed-menu{
+        background-color: $white;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        .container{
+            .logo{
+                background-image: url(../img/logo-neon-color.svg);
+            }
+            nav{
+                li{
+                    a{
+                        color: $gray-400
+                    }
+                }
+                .btn-secondary{
+                    &.white{
+                        border: 1px solid $brand-light-blue;
+                        a{
+                            color: $brand-light-blue;
+                        }
+                        &:hover{
+                            background-color: $brand-light-blue;
+                            a{
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .container{
         @include flex(row, center, space-between);
+        .logo{
+            display: block;
+            background: url(../img/logo-neon-white.svg) no-repeat center center;
+            width: 13.2rem;
+            height: 3rem;
+            background-size: 100% !important;
+        }
+
         nav{
             @include flex(row, center, space-between);
             gap: 5.9rem;
